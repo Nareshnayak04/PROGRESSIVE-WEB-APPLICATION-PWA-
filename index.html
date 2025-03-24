@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce PWA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>My E-Commerce Store</h1>
+    </header>
+
+    <main>
+        <div class="product">
+            <img src="https://static.vecteezy.com/system/resources/previews/017/054/078/original/headphones-design-3d-rendering-for-product-mockup-free-png.png" alt="Product 1">
+            <h2>Product 1</h2>
+            <button onclick="addToCart('Product 1')">Add to Cart</button>
+            <br><br>
+            <br>
+            <img src="https://tse4.mm.bing.net/th?id=OIF.IJmeSLVn7MI07O%2b%2bEUeTnA&pid=Api&P=0&h=180.png" alt="Product 2">
+            <h2>Product 2</h2>
+            <button onclick="addToCart('Product 2')">Add to Cart</button>
+        </div>
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('Service Worker Registered'));
+        }
+    </script>
+</body>
+</html>
